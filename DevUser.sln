@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevUser", "DevUser\DevUser.csproj", "{43CB4574-B09F-4B8F-A975-4FE4A2373AFC}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DotNetNote.Database", "..\DotNetNote.Database\DotNetNote.Database\DotNetNote.Database.sqlproj", "{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{43CB4574-B09F-4B8F-A975-4FE4A2373AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CB4574-B09F-4B8F-A975-4FE4A2373AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CB4574-B09F-4B8F-A975-4FE4A2373AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
