@@ -43,6 +43,8 @@ namespace DevUser.Repositories
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = "Select * From Users Where UserID = @UserID";
+            
+            md.Parameters.AddWithValue("@UserID", userId);
             con.Open();
             IDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
