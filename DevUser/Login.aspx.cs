@@ -21,12 +21,15 @@ namespace DevUser
             var userRepo = new UserRepository();
             if(userRepo.IsCorrectUser(txtUserID.Text, txtPassword.Text))
             {
+                //인증 부여
                 if(!String.IsNullOrEmpty(Request.QueryString["ReturnUrl"]))
                 {
+                    //인증 쿠키값 부여
                     FormsAuthentication.RedirectFromLoginPage(txtUserID.Text, false);
                 }
                 else
                 {
+                    // 인증쿠키 값 부여
                     FormsAuthentication.SetAuthCookie(txtUserID.Text, false);
                     Response.Redirect("~/Welcome.aspx");
                 }

@@ -13,7 +13,7 @@
             <h1>회원 관리</h1>
             <h2>회원 가입</h2>
             아이디:<asp:TextBox ID="txtUserID" runat="server"></asp:TextBox><br />
-            암호:<asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+            암호:<asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <asp:Button ID="btnRegister" runat="server" Text="가입" OnClick="btnRegister_Click" />
             <br />
