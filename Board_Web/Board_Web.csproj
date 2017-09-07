@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dul">
+      <HintPath>..\..\Dul\Dul\bin\Debug\netstandard2.0\Dul.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -164,6 +170,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DotNetNote\BoardDown.aspx" />
+    <Content Include="DotNetNote\BoardList.aspx" />
+    <Content Include="DotNetNote\Default.aspx" />
+    <Content Include="DotNetNote\ImageDown.aspx" />
+    <Content Include="DotNetNote\ImageText.aspx" />
+    <Content Include="DotNetNote\ThumbNail.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -234,6 +246,54 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DotNetNote\BoardDown.aspx.cs">
+      <DependentUpon>BoardDown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardDown.aspx.designer.cs">
+      <DependentUpon>BoardDown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\BoardList.aspx.cs">
+      <DependentUpon>BoardList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardList.aspx.designer.cs">
+      <DependentUpon>BoardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\ImageText.aspx.cs">
+      <DependentUpon>ImageText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\ImageText.aspx.designer.cs">
+      <DependentUpon>ImageText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\Models\BoardWriteFormType.cs" />
+    <Compile Include="DotNetNote\Models\ContentEncodingType.cs" />
+    <Compile Include="DotNetNote\ImageDown.aspx.cs">
+      <DependentUpon>ImageDown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\ImageDown.aspx.designer.cs">
+      <DependentUpon>ImageDown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\Models\Note.cs" />
+    <Compile Include="DotNetNote\Models\NoteComment.cs" />
+    <Compile Include="DotNetNote\Models\NoteCommentsRepository.cs" />
+    <Compile Include="DotNetNote\Models\NoteRepository.cs" />
+    <Compile Include="DotNetNote\ThumbNail.aspx.cs">
+      <DependentUpon>ThumbNail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\ThumbNail.aspx.designer.cs">
+      <DependentUpon>ThumbNail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -247,12 +307,14 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -261,6 +323,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="DotNetNote\Control\" />
+    <Folder Include="DotNetNote\images\dnn\" />
+    <Folder Include="DotNetNote\images\ext\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
