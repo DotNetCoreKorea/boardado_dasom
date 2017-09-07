@@ -32,7 +32,7 @@ namespace Board_Web.DotNetNote.Models
         [Required(ErrorMessage = "암호를 입력하세요")]
         public string Password { get; set; }
         public int ReadCount { get; set; }
-        public string Encoding { get; set; }
+        public string Encoding { get; set; } = "Text";
         public string Homepage { get; set; }
         public DateTime ModifyDate { get; set; }
         public string ModifyIp { get; set; }
@@ -45,7 +45,7 @@ namespace Board_Web.DotNetNote.Models
         public int AnswerNum { get; set; }
         public int ParentNum { get; set; }
         public int CommentCount { get; set; }
-        public string Category { get; set; }
+        public string Category { get; set; } = "Free";
 
     }
 }

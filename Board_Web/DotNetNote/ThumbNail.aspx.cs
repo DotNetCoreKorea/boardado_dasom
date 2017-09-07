@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -28,6 +29,41 @@ namespace Board_Web.DotNetNote
                 selectedFile = "/images/dnn/img.jpg";
                 fileName = Server.MapPath("/imges/dnn/img.jpg");
             }
+
+            int tmpW = 0;
+            int tmpH = 0; 
+
+            if(Request.QueryString["Width"] != null && Request.QueryString["Height"] != null)
+            {
+                tmpW = Convert.ToInt32(Request.QueryString["Width"]);
+                tmpH = Convert.ToInt32(Request.QueryString["Height"]);
+            }
+            if(tmpW > 0 && tmpH > 0)
+            {
+                boxWidth = tmpW;
+                boxHeigth = tmpH;
+            }
+
+            Bitmap b = new Bitmap(fileName);
+
+            if(b.Height > b.Width)
+            {
+                scale = ((double)boxHeigth)/b.Width;
+            }
+            else
+            {
+                scale = ((double)boxWidth) / b.Height;
+            }
+
+            int newWidth = (int)(scale * b.Width);
+            int newHeight = (int)(scale * b.Height);
+
+            Bitmap bOut = new Bitmap(b, newWidth, newHeight);
+            bOut.Save(Response.OutputStream, b.RawFormat);
+
+            b.Dispose();
+            bOut.Dispose();
+        
         }
     }
 }
