@@ -10,60 +10,51 @@
 namespace Board_Web.DotNetNote {
     
     
-    public partial class BoardSearchFormSingleControl {
+    public partial class BoardDelete {
         
         /// <summary>
-        /// form1 컨트롤입니다.
+        /// lblId 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblId;
         
         /// <summary>
-        /// SearchField 컨트롤입니다.
+        /// txtPassword 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SearchField;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
         
         /// <summary>
-        /// SearchQuery 컨트롤입니다.
+        /// btnDelete 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SearchQuery;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// valSearchQuery 컨트롤입니다.
+        /// lnkCancel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator valSearchQuery;
+        protected global::System.Web.UI.WebControls.HyperLink lnkCancel;
         
         /// <summary>
-        /// valSummary 컨트롤입니다.
+        /// lblMessage 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valSummary;
-        
-        /// <summary>
-        /// btnSearch 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

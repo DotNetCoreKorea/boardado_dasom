@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AdvancedPagingSingleWithBootstrap.ascx.cs" Inherits="Board_Web.DotNetNote.AdvancedPagingSingleWithBootstrap" %>
+<asp:Literal ID="ctlAdvancedPagingSingleWithBootstrap" runat="server"></asp:Literal>

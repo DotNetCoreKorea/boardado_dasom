@@ -176,8 +176,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DotNetNote\AdvancedPagingSingleWithBootstrap.ascx" />
+    <Content Include="DotNetNote\BoardDelete.aspx" />
     <Content Include="DotNetNote\BoardDown.aspx" />
     <Content Include="DotNetNote\BoardList.aspx" />
+    <Content Include="DotNetNote\BoardModify.aspx" />
+    <Content Include="DotNetNote\BoardReply.aspx" />
     <Content Include="DotNetNote\BoardSearchFormSingleControl.aspx" />
     <Content Include="DotNetNote\BoardView.aspx" />
     <Content Include="DotNetNote\BoardWrite.aspx" />
@@ -265,6 +269,20 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DotNetNote\AdvancedPagingSingleWithBootstrap.ascx.cs">
+      <DependentUpon>AdvancedPagingSingleWithBootstrap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\AdvancedPagingSingleWithBootstrap.ascx.designer.cs">
+      <DependentUpon>AdvancedPagingSingleWithBootstrap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\BoardDelete.aspx.cs">
+      <DependentUpon>BoardDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardDelete.aspx.designer.cs">
+      <DependentUpon>BoardDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DotNetNote\BoardDown.aspx.cs">
       <DependentUpon>BoardDown.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,6 +296,20 @@
     </Compile>
     <Compile Include="DotNetNote\BoardList.aspx.designer.cs">
       <DependentUpon>BoardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\BoardModify.aspx.cs">
+      <DependentUpon>BoardModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardModify.aspx.designer.cs">
+      <DependentUpon>BoardModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\BoardReply.aspx.cs">
+      <DependentUpon>BoardReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardReply.aspx.designer.cs">
+      <DependentUpon>BoardReply.aspx</DependentUpon>
     </Compile>
     <Compile Include="DotNetNote\BoardSearchFormSingleControl.aspx.cs">
       <DependentUpon>BoardSearchFormSingleControl.aspx</DependentUpon>

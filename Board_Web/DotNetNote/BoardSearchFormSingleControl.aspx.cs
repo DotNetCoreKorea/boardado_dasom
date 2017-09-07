@@ -13,5 +13,12 @@ namespace Board_Web.DotNetNote
         {
 
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string strQuery =
+                String.Format("/DotNetNote/BoardList.aspx?SearchField={0}&SearchQuery={1}", SearchField.SelectedItem.Value, SearchQuery.Text);
+            Response.Redirect(strQuery);
+        }
     }
 }
