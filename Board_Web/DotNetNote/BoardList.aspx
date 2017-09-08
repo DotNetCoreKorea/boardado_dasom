@@ -30,7 +30,8 @@
                             <ItemTemplate>
                                 <%# Dul.BoardLibrary.FuncStep(Eval("Step")) %>
                                 <asp:HyperLink ID="lnkTitle" runat="server" 
-                                    NavigateUr='<%# "BoardView.aspx?Id=" + Eval("Id") %>'>
+                                    NavigateUrl=
+                                    '<%# "BoardView.aspx?Id=" + Eval("Id") %>'>
                                     <%# Dul.StringLibrary.CutStringUnicode(Eval("Title").ToString(), 30) %>
                                 </asp:HyperLink>
                                 <%# Dul.BoardLibrary.ShowCommentCount(Eval("CommentCount")) %>

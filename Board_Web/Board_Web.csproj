@@ -57,7 +57,8 @@
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="Dul">
+    <Reference Include="Dul, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Dul\Dul\bin\Debug\netstandard2.0\Dul.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -177,6 +178,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="DotNetNote\AdvancedPagingSingleWithBootstrap.ascx" />
+    <Content Include="DotNetNote\BoardCommentDelete.aspx" />
     <Content Include="DotNetNote\BoardDelete.aspx" />
     <Content Include="DotNetNote\BoardDown.aspx" />
     <Content Include="DotNetNote\BoardList.aspx" />
@@ -185,10 +187,12 @@
     <Content Include="DotNetNote\BoardSearchFormSingleControl.ascx" />
     <Content Include="DotNetNote\BoardView.aspx" />
     <Content Include="DotNetNote\BoardWrite.aspx" />
+    <Content Include="DotNetNote\Control\BoardCommentControl.ascx" />
     <Content Include="DotNetNote\Control\BoardEditorFormControl.ascx" />
     <Content Include="DotNetNote\Default.aspx" />
     <Content Include="DotNetNote\ImageDown.aspx" />
     <Content Include="images\dnn\commentcount.gif" />
+    <Content Include="images\dnn\icon_delete_red.gif" />
     <Content Include="images\dnn\new.gif" />
     <Content Include="DotNetNote\ImageText.aspx" />
     <Content Include="DotNetNote\ThumbNail.aspx" />
@@ -207,6 +211,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="images\dnn\re.gif" />
+    <Content Include="images\ext\ext_zip.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -278,6 +284,13 @@
     <Compile Include="DotNetNote\AdvancedPagingSingleWithBootstrap.ascx.designer.cs">
       <DependentUpon>AdvancedPagingSingleWithBootstrap.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DotNetNote\BoardCommentDelete.aspx.cs">
+      <DependentUpon>BoardCommentDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardCommentDelete.aspx.designer.cs">
+      <DependentUpon>BoardCommentDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DotNetNote\BoardDelete.aspx.cs">
       <DependentUpon>BoardDelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -333,6 +346,13 @@
     </Compile>
     <Compile Include="DotNetNote\BoardWrite.aspx.designer.cs">
       <DependentUpon>BoardWrite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\Control\BoardCommentControl.ascx.cs">
+      <DependentUpon>BoardCommentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\Control\BoardCommentControl.ascx.designer.cs">
+      <DependentUpon>BoardCommentControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="DotNetNote\Control\BoardEditorFormControl.ascx.cs">
       <DependentUpon>BoardEditorFormControl.ascx</DependentUpon>
@@ -404,7 +424,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="images\ext\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -417,6 +436,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
