@@ -182,12 +182,14 @@
     <Content Include="DotNetNote\BoardList.aspx" />
     <Content Include="DotNetNote\BoardModify.aspx" />
     <Content Include="DotNetNote\BoardReply.aspx" />
-    <Content Include="DotNetNote\BoardSearchFormSingleControl.aspx" />
+    <Content Include="DotNetNote\BoardSearchFormSingleControl.ascx" />
     <Content Include="DotNetNote\BoardView.aspx" />
     <Content Include="DotNetNote\BoardWrite.aspx" />
     <Content Include="DotNetNote\Control\BoardEditorFormControl.ascx" />
     <Content Include="DotNetNote\Default.aspx" />
     <Content Include="DotNetNote\ImageDown.aspx" />
+    <Content Include="images\dnn\commentcount.gif" />
+    <Content Include="images\dnn\new.gif" />
     <Content Include="DotNetNote\ImageText.aspx" />
     <Content Include="DotNetNote\ThumbNail.aspx" />
     <Content Include="favicon.ico" />
@@ -311,12 +313,12 @@
     <Compile Include="DotNetNote\BoardReply.aspx.designer.cs">
       <DependentUpon>BoardReply.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DotNetNote\BoardSearchFormSingleControl.aspx.cs">
-      <DependentUpon>BoardSearchFormSingleControl.aspx</DependentUpon>
+    <Compile Include="DotNetNote\BoardSearchFormSingleControl.ascx.cs">
+      <DependentUpon>BoardSearchFormSingleControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DotNetNote\BoardSearchFormSingleControl.aspx.designer.cs">
-      <DependentUpon>BoardSearchFormSingleControl.aspx</DependentUpon>
+    <Compile Include="DotNetNote\BoardSearchFormSingleControl.ascx.designer.cs">
+      <DependentUpon>BoardSearchFormSingleControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="DotNetNote\BoardView.aspx.cs">
       <DependentUpon>BoardView.aspx</DependentUpon>
@@ -402,8 +404,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="DotNetNote\images\dnn\" />
-    <Folder Include="DotNetNote\images\ext\" />
+    <Folder Include="images\ext\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

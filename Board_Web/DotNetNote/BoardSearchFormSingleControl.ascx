@@ -1,15 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BoardSearchFormSingleControl.aspx.cs" Inherits="Board_Web.DotNetNote.BoardSearchFormSingleControl" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div style="text-align:center;">
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BoardSearchFormSingleControl.ascx.cs" Inherits="Board_Web.DotNetNote.BoardSearchFormSingleControl" %>
+  <div style="text-align:center;">
             <asp:DropDownList ID="SearchField" runat="server" CssClass="form-control" Width="80px" style="display:inline-block;">
                 <asp:ListItem Value="Name">이름</asp:ListItem>
                 <asp:ListItem Value="Title">제목</asp:ListItem>
@@ -31,6 +21,3 @@
         <%
             }
         %>
-    </form>
-</body>
-</html>

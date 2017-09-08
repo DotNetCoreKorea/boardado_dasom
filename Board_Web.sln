@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Board_Web", "Board_Web\Boar
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DotNetNote.Database", "..\DotNetNote.Database\DotNetNote.Database\DotNetNote.Database.sqlproj", "{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dul", "..\Dul\Dul\Dul.csproj", "{A73D36B9-E3C0-4CB6-B65A-53AB49647BD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8C8FBA6-D404-40BF-863F-8B9286A7B9D0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A73D36B9-E3C0-4CB6-B65A-53AB49647BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73D36B9-E3C0-4CB6-B65A-53AB49647BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73D36B9-E3C0-4CB6-B65A-53AB49647BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73D36B9-E3C0-4CB6-B65A-53AB49647BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

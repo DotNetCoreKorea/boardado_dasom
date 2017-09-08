@@ -22,7 +22,7 @@ namespace Board_Web.DotNetNote
 
         [Description("한 페이지에서 몇 개의 레코드를 보여줄 건지 결정")]
         [Category("페이징 처리")]
-        public int PageSize { get; set; }
+        public int PageSize { get; set; } = 10;
         
         private int _RecordCount;
 
