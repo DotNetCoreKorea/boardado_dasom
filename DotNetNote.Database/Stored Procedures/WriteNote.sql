@@ -1,5 +1,5 @@
 ﻿--[1] 게시판 글을 작성
-CREATE PROCEDURE [dbo].[DNN_WriteNote]
+CREATE PROCEDURE [dbo].[WriteNote]
 	@Name		Nvarchar(25),
 	@Email		Nvarchar(100),
 	@Title		Nvarchar(150),

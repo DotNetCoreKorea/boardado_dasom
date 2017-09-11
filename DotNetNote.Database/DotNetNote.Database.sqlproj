@@ -62,15 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Notes.sql" />
-    <Build Include="Stored Procedures\DNN_DeleteNote.sql" />
-    <Build Include="Stored Procedures\DNN_GetCountNotes.sql" />
-    <Build Include="Stored Procedures\DNN_ListNotes.sql" />
-    <Build Include="Stored Procedures\DNN_ModifyNote.sql" />
-    <Build Include="Stored Procedures\DNN_ReplyNote.sql" />
-    <Build Include="Stored Procedures\DNN_SearchNoteCount.sql" />
-    <Build Include="Stored Procedures\DNN_SearchNotes.sql" />
-    <Build Include="Stored Procedures\DNN_ViewNote.sql" />
-    <Build Include="Stored Procedures\DNN_WriteNote.sql" />
+    <Build Include="Stored Procedures\DeleteNote.sql" />
+    <Build Include="Stored Procedures\GetCountNotes.sql" />
+    <Build Include="Stored Procedures\ListNotes.sql" />
+    <Build Include="Stored Procedures\ModifyNote.sql" />
+    <Build Include="Stored Procedures\ReplyNote.sql" />
+    <Build Include="Stored Procedures\SearchNoteCount.sql" />
+    <Build Include="Stored Procedures\SearchNotes.sql" />
+    <Build Include="Stored Procedures\ViewNote.sql" />
+    <Build Include="Stored Procedures\WriteNote.sql" />
     <Build Include="Tables\CommunityCampJoinMembers.sql" />
     <Build Include="Tables\Users.sql" />
     <Build Include="Stored Procedures\Users_Procedures.sql" />

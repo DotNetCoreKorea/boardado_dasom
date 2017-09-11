@@ -1,5 +1,5 @@
 ﻿--[4] 게시판에 대한 글을 답변
-CREATE PROCEDURE [dbo].[DNN_ReplyNote]
+CREATE PROCEDURE [dbo].[ReplyNote]
 	@Name		Nvarchar(25),
 	@Email		Nvarchar(100),
 	@Title		Nvarchar(150),

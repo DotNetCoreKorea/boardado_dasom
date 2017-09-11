@@ -1,5 +1,5 @@
 ﻿--[8] 해당 글을 수정하는 저장 프로시저 
-CREATE PROCEDURE [dbo].[DNN_ModifyNote]
+CREATE PROCEDURE [dbo].[ModifyNote]
 	@Name		Nvarchar(25),
 	@Email		Nvarchar(100),
 	@Title		Nvarchar(150),

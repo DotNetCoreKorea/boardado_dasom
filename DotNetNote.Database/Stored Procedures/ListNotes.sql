@@ -1,5 +1,5 @@
 ﻿--[2] 게시판에서 데이터 출력
-CREATE PROCEDURE [dbo].[DNN_ListNotes]
+CREATE PROCEDURE [dbo].[ListNotes]
 	@Page Int
 AS
 	with DotNetNoteOrederedLists

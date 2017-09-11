@@ -1,5 +1,5 @@
 ﻿--[7] 해당 글을 지우는 저장프로시저 : 답변 글이 있으면 업데이트 하고 없으면 지운다.
-CREATE PROCEDURE [dbo].[DNN_DeleteNote]
+CREATE PROCEDURE [dbo].[DeleteNote]
 	@Id Int,
 	@Password Nvarchar(30) --암호 매개 변수 추가
 AS

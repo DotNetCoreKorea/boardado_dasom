@@ -1,5 +1,5 @@
 ﻿--[9] 게시판에서 데이터 검색 리스트
-CREATE PROCEDURE [dbo].[DNN_SearchNotes]
+CREATE PROCEDURE [dbo].[SearchNotes]
 	@Page Int,
 	@SearchField Nvarchar(25),
 	@SearchQuery Nvarchar(25)

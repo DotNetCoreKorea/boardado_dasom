@@ -1,5 +1,5 @@
 ﻿--[3] 해당 글을 세부적으로 읽어 오는 저장 프로시저
-CREATE PROCEDURE [dbo].[DNN_ViewNote]
+CREATE PROCEDURE [dbo].[ViewNote]
 	@Id Int
 AS
 	-- 조회수 카운트 1증가
