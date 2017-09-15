@@ -13,5 +13,28 @@ namespace EddyHomepage.Controllers
         {
             return View();
         }
+        public ActionResult Feedback()
+        {
+            return View();
+        }
+        public ActionResult Resume()
+        {
+            return View();
+        }
+
+        public ActionResult Contacts()
+        {
+            return View();
+        }
+
+        public ActionResult Portfolio()
+        {
+            return View();
+        }
+
+        public ActionResult Blog()
+        {
+            return View();
+        }
     }
 }

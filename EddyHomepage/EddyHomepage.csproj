@@ -372,11 +372,16 @@
     <Content Include="Template\assets\vendor\footable\fonts\footable.ttf" />
     <Content Include="Template\assets\vendor\footable\fonts\footable.woff" />
     <Content Include="Views\Shared\_HomePageLayoutPage.cshtml" />
+    <Content Include="Views\EddyHome\Index.cshtml" />
+    <Content Include="Views\EddyHome\Feedback.cshtml" />
+    <Content Include="Views\EddyHome\Contacts.cshtml" />
+    <Content Include="Views\EddyHome\Resume.cshtml" />
+    <Content Include="Views\EddyHome\Portfolio.cshtml" />
+    <Content Include="Views\EddyHome\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\EddyHome\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

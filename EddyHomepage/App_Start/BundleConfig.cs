@@ -16,7 +16,7 @@ namespace EddyHomepage
                 "~/Template/assets/vendor/wow/animate.css",
                 "~/Template/assets/vendor/mfp/css/magnific-popup.css",
                 "~/Template/assets/vendor/footable/footable.core.css",
-                "~/Template/assets/custom/js/custom.js"
+                "~/Template/assets/custom/css/style.css"
                 ));
 
             bundles.Add(new StyleBundle("~/eddyhome/js").Include(
