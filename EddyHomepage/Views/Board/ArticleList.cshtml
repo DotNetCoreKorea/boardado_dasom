@@ -1,0 +1,65 @@
+﻿@using EddyHomepage.Models;
+@model List<EddyHomepage.Models.Articles>
+@{
+    ViewBag.Title = "ArticleList";
+    Layout = "~/Views/Shared/_HomePageLayoutPage.cshtml";
+}
+<`div class="content-wrap">
+<div id="blogpost" class="inner-content">
+    <section class="inner-section">
+        <div class="container-fluid nopadding">
+            <div class="wow fadeInDown" data-wow-delay="0.6s" data-wow-offset="10">
+                <div id="post-comment">
+                    <h4 class="font-accident-one-light uppercase">게시물 목록</h4>
+                </div>
+                <div class="dividewhite2"></div>
+                <form action="#" method="post" novalidate="novalidate">
+                    <div class="row">
+                        <table class="footable table table-striped toggle-arrow-tiny" data-page-size="10" style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th width="10%" data-toggle="true" data-sort-ignore="true" data-hide="phone,tablet">순번</th>
+                                    <th width="10%" data-toggle="true" data-sort-ignore="true" data-hide="phone,tablet">고객아이디</th>
+                                    <th width="20%" data-toggle="true" data-sort-ignore="true" data-hide="phone,tablet">고객명</th>
+                                    <th width="20%" data-toggle="true" data-sort-ignore="true" data-hide="phone,tablet">전화번호</th>
+                                    <th width="20%" data-toggle="true" data-sort-ignore="true" data-hide="phone,tablet">메일주소</th>
+                                    <th width="20%" data-toggle="true" data-sort-ignore="true" data-hide="phone,tablet">가입일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int i = 0;
+                                    int idx = 0;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    idx = Model.Count - i;
+
+                                    <tr>
+                                        <td>@idx.ToString()</td>
+                                        <td><a href="/Board/Edit?boardid=@item.ArticleIDX">@item.ArticleIDX</a></td>
+                                        <td>@item.Title</td>
+                                        <td>@item.Category</td>
+                                        <td>@item.Contents</td>
+                                        <td>@Convert.ToDateTime(item.RegistDate).ToString("yyyy-mm-dd")</td>
+                                    </tr>
+                                    i++;
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6"><ul class="pagination pull-right"></ul></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="dividewhite8"></div>
+    </section>
+    <!-- /Blog Block -->
+</div>
+</`div>
+
+

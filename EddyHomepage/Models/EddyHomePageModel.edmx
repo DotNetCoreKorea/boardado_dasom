@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EddyHomePageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ArticleCategory">
+          <Key>
+            <PropertyRef Name="ArticleIDX" />
+            <PropertyRef Name="CategoryCode" />
+          </Key>
+          <Property Name="ArticleIDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryCode" Type="int" Nullable="false" />
+          <Property Name="RegistDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleComments">
+          <Key>
+            <PropertyRef Name="MemberID" />
+            <PropertyRef Name="ArticleIDX" />
+          </Key>
+          <Property Name="MemberID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ArticleIDX" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="20" />
+          <Property Name="RegistDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ArticleFiles">
+          <Key>
+            <PropertyRef Name="FileIDX" />
+          </Key>
+          <Property Name="FileIDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ArticleIDX" Type="int" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FileSize" Type="int" />
+          <Property Name="FileFormat" Type="varchar" MaxLength="50" />
+          <Property Name="UploadDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="ArticleIDX" />
+          </Key>
+          <Property Name="ArticleIDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BoardIDX" Type="int" />
+          <Property Name="ArticleType" Type="char" MaxLength="1" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Contents" Type="ntext" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="20" />
+          <Property Name="ViewCnt" Type="int" />
+          <Property Name="RegistDate" Type="datetime" />
+          <Property Name="RegistUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="ModifyUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Category" Type="int" />
+          <Property Name="RegistMemberID" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyMemberID" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryCode" />
+          </Key>
+          <Property Name="CategoryCode" Type="int" Nullable="false" />
+          <Property Name="CategoryDesc" Type="varchar" MaxLength="20" />
+          <Property Name="RegistDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="MemberID" />
+          </Key>
+          <Property Name="MemberID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="MemberPWD" Type="varchar" MaxLength="20" />
+          <Property Name="MemberName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Telephone" Type="varchar" MaxLength="20" />
+          <Property Name="EntityDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_ArticleFiles_ArticleFiles">
+          <End Role="ArticleFiles" Type="Self.ArticleFiles" Multiplicity="1" />
+          <End Role="ArticleFiles1" Type="Self.ArticleFiles" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleFiles">
+              <PropertyRef Name="FileIDX" />
+            </Principal>
+            <Dependent Role="ArticleFiles1">
+              <PropertyRef Name="FileIDX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EddyHomePageModelStoreContainer">
+          <EntitySet Name="ArticleCategory" EntityType="Self.ArticleCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ArticleComments" EntityType="Self.ArticleComments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ArticleFiles" EntityType="Self.ArticleFiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ArticleFiles_ArticleFiles" Association="Self.FK_ArticleFiles_ArticleFiles">
+            <End Role="ArticleFiles" EntitySet="ArticleFiles" />
+            <End Role="ArticleFiles1" EntitySet="ArticleFiles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EddyHomePageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ArticleCategory">
+          <Key>
+            <PropertyRef Name="ArticleIDX" />
+            <PropertyRef Name="CategoryCode" />
+          </Key>
+          <Property Name="ArticleIDX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryCode" Type="Int32" Nullable="false" />
+          <Property Name="RegistDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ArticleComments">
+          <Key>
+            <PropertyRef Name="MemberID" />
+            <PropertyRef Name="ArticleIDX" />
+          </Key>
+          <Property Name="MemberID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ArticleIDX" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RegistDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ArticleFiles">
+          <Key>
+            <PropertyRef Name="FileIDX" />
+          </Key>
+          <Property Name="FileIDX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArticleIDX" Type="Int32" />
+          <Property Name="FilePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FileSize" Type="Int32" />
+          <Property Name="FileFormat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UploadDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ArticleFiles1" Relationship="Self.FK_ArticleFiles_ArticleFiles" FromRole="ArticleFiles" ToRole="ArticleFiles1" />
+          <NavigationProperty Name="ArticleFiles2" Relationship="Self.FK_ArticleFiles_ArticleFiles" FromRole="ArticleFiles1" ToRole="ArticleFiles" />
+        </EntityType>
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="ArticleIDX" />
+          </Key>
+          <Property Name="ArticleIDX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BoardIDX" Type="Int32" />
+          <Property Name="ArticleType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ViewCnt" Type="Int32" />
+          <Property Name="RegistDate" Type="DateTime" Precision="3" />
+          <Property Name="RegistUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="Int32" />
+          <Property Name="RegistMemberID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ModifyMemberID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryCode" />
+          </Key>
+          <Property Name="CategoryCode" Type="Int32" Nullable="false" />
+          <Property Name="CategoryDesc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RegistDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="MemberID" />
+          </Key>
+          <Property Name="MemberID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MemberPWD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MemberName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EntityDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK_ArticleFiles_ArticleFiles">
+          <End Role="ArticleFiles" Type="Self.ArticleFiles" Multiplicity="1" />
+          <End Role="ArticleFiles1" Type="Self.ArticleFiles" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleFiles">
+              <PropertyRef Name="FileIDX" />
+            </Principal>
+            <Dependent Role="ArticleFiles1">
+              <PropertyRef Name="FileIDX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EddyHomePageEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ArticleCategory" EntityType="Self.ArticleCategory" />
+          <EntitySet Name="ArticleComments" EntityType="Self.ArticleComments" />
+          <EntitySet Name="ArticleFiles" EntityType="Self.ArticleFiles" />
+          <EntitySet Name="Articles" EntityType="Self.Articles" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" />
+          <EntitySet Name="Member" EntityType="Self.Member" />
+          <AssociationSet Name="FK_ArticleFiles_ArticleFiles" Association="Self.FK_ArticleFiles_ArticleFiles">
+            <End Role="ArticleFiles" EntitySet="ArticleFiles" />
+            <End Role="ArticleFiles1" EntitySet="ArticleFiles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EddyHomePageModelStoreContainer" CdmEntityContainer="EddyHomePageEntities">
+          <EntitySetMapping Name="ArticleCategory">
+            <EntityTypeMapping TypeName="EddyHomePageModel.ArticleCategory">
+              <MappingFragment StoreEntitySet="ArticleCategory">
+                <ScalarProperty Name="ArticleIDX" ColumnName="ArticleIDX" />
+                <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+                <ScalarProperty Name="RegistDate" ColumnName="RegistDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleComments">
+            <EntityTypeMapping TypeName="EddyHomePageModel.ArticleComments">
+              <MappingFragment StoreEntitySet="ArticleComments">
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+                <ScalarProperty Name="ArticleIDX" ColumnName="ArticleIDX" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="RegistDate" ColumnName="RegistDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleFiles">
+            <EntityTypeMapping TypeName="EddyHomePageModel.ArticleFiles">
+              <MappingFragment StoreEntitySet="ArticleFiles">
+                <ScalarProperty Name="FileIDX" ColumnName="FileIDX" />
+                <ScalarProperty Name="ArticleIDX" ColumnName="ArticleIDX" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="FileFormat" ColumnName="FileFormat" />
+                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Articles">
+            <EntityTypeMapping TypeName="EddyHomePageModel.Articles">
+              <MappingFragment StoreEntitySet="Articles">
+                <ScalarProperty Name="ArticleIDX" ColumnName="ArticleIDX" />
+                <ScalarProperty Name="BoardIDX" ColumnName="BoardIDX" />
+                <ScalarProperty Name="ArticleType" ColumnName="ArticleType" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="ViewCnt" ColumnName="ViewCnt" />
+                <ScalarProperty Name="RegistDate" ColumnName="RegistDate" />
+                <ScalarProperty Name="RegistUserName" ColumnName="RegistUserName" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="RegistMemberID" ColumnName="RegistMemberID" />
+                <ScalarProperty Name="ModifyMemberID" ColumnName="ModifyMemberID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="EddyHomePageModel.Categories">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+                <ScalarProperty Name="CategoryDesc" ColumnName="CategoryDesc" />
+                <ScalarProperty Name="RegistDate" ColumnName="RegistDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Member">
+            <EntityTypeMapping TypeName="EddyHomePageModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+                <ScalarProperty Name="MemberPWD" ColumnName="MemberPWD" />
+                <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="EntityDate" ColumnName="EntityDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
